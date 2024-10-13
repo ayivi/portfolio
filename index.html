@@ -24,8 +24,8 @@
           </div>
         </div>
   
-        <!-- Right Side -->
-        <div class="flex items-center gap-2">
+        <!-- Right Side - Desktop -->
+        <div class="hidden lg:flex items-center gap-2">
           <!-- Links -->
           <a href="mailto:selormkwasi@gmail.com" class="font-sfpro text-[#FCFCFC]">selormkwasi@gmail.com</a>
           <div class="w-[4px] h-[4px] bg-[#FCFCFC] rounded-full"></div>
@@ -47,16 +47,59 @@
           
           <a href="https://www.figma.com/@ayivi" class="font-sfpro text-[#FCFCFC]">figma</a>
         </div>
+
+        <!-- Hamburger Menu - Mobile and Tablet -->
+        <div class="lg:hidden">
+            <button id="menu-toggle" class="text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-[rgba(15,15,15,0.95)] z-50 hidden">
+        <div class="flex flex-col h-full px-8 pt-24">
+            <button id="close-menu" class="absolute top-4 right-8 text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <div class="flex flex-col gap-8">
+                <a href="mailto:selormkwasi@gmail.com" class="font-sfpro text-[#FCFCFC] text-lg">selormkwasi@gmail.com</a>
+                <a href="https://www.linkedin.com/in/michael-ayivi/" class="font-sfpro text-[#FCFCFC] text-lg">linkedIn</a>
+                <a href="https://www.instagram.com/_ayivi/" class="font-sfpro text-[#FCFCFC] text-lg">instagram</a>
+                <a href="https://dribbble.com/_ayivi" class="font-sfpro text-[#FCFCFC] text-lg">dribbble</a>
+                <a href="https://x.com/_ayivi" class="font-sfpro text-[#FCFCFC] text-lg">twitter</a>
+                <a href="https://layers.to/ayivi" class="font-sfpro text-[#FCFCFC] text-lg">layers.to</a>
+                <a href="https://www.figma.com/@ayivi" class="font-sfpro text-[#FCFCFC] text-lg">figma</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+    </script>
 
     <!-- Main Content -->
     <header>
     </header>
-    <main class="grid grid-cols-2 gap-8 p-4 sm:p-8 xl:max-w-screen-2xl mx-auto place-content-center">
+    <main class="grid grid-cols-1 md:grid-cols-2 gap-8 p-4 sm:p-8 xl:max-w-screen-2xl mx-auto place-content-center">
 
         <!-- Left Column (Text Content) -->
         <div class="col-span-1">
-            <h1 class="font-sfpro text-[#9FA4AD] text-[36px] font-bold leading-[39.6px] mb-3">
+            <h1 class="font-sfpro text-[#9FA4AD] text-[24px] md:text-[36px] font-bold leading-[1.1] md:leading-[39.6px] mb-3">
                 michael ayivi,
                 <span class="text-white">
                     a freelance designer specializing in web 💻 and mobile app 📱design 
@@ -64,7 +107,7 @@
                 for idea and early-stage startups.
             </h1>
 
-            <div class="flex items-center gap-2 mb-8 flex-wrap w-full">
+            <div class="flex flex-wrap items-center gap-2 mb-8 w-full">
                 <!-- Work Experience Section-->
                 <span class="font-sfpro text-[#fcfcfc]">work experience</span>
                 <div class="w-[4px] h-[4px] bg-[#ff5a00] rounded-full"></div>
