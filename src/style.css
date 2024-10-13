@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'SF Pro Rounded';
+    src: url('../fonts/SF-Pro-Rounded-Medium.woff2') format('woff2'),
+         url('../fonts/SF-Pro-Rounded-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF Pro Rounded';
+    src: url('../fonts/SF-Pro-Rounded-Bold.woff2') format('woff2'),
+         url('../fonts/SF-Pro-Rounded Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: bold;
+}
+
+nav {
+    position: fixed; /* Fixes the navigation to the top */
+    top: 0; /* Aligns it to the top of the viewport */
+    left: 0; /* Aligns it to the left */
+    right: 0; /* Aligns it to the right */
+    z-index: 50; /* Ensures it stays on top of other elements */
+}
+
+/* Adjust body padding to prevent content from being hidden behind the fixed nav */
+body {
+    padding-top: 64px; /* Adjust based on your navigation height */
+}
