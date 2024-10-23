@@ -30,3 +30,38 @@ nav {
 body {
     padding-top: 64px; /* Adjust based on your navigation height */
 }
+
+/* Initially, hide the modal */
+#image-modal {
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Make modal visible when it has the 'active' class */
+#image-modal.active {
+    display: flex;
+}
+
+#modal-image {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+#image-modal {
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    inset: 0; /* Fullscreen */
+    background: rgba(0, 0, 0, 0.8); /* Dark background */
+    z-index: 50;
+}
+
+#close-modal {
+    font-size: 2rem;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}

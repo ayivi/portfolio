@@ -574,6 +574,10 @@ video {
   right: 0px;
 }
 
+.right-4 {
+  right: 1rem;
+}
+
 .top-0 {
   top: 0px;
 }
@@ -643,6 +647,10 @@ video {
   height: 100%;
 }
 
+.max-h-full {
+  max-height: 100%;
+}
+
 .w-6 {
   width: 1.5rem;
 }
@@ -653,6 +661,14 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.max-w-full {
+  max-width: 100%;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .grid-cols-1 {
@@ -736,6 +752,11 @@ video {
   background-color: rgba(15,15,15,0.70);
 }
 
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .bg-portfolio-bg {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
@@ -744,6 +765,10 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-opacity-80 {
+  --tw-bg-opacity: 0.8;
 }
 
 .px-2 {
@@ -784,6 +809,11 @@ video {
 
 .font-sfpro {
   font-family: SF Pro Rounded, sans-serif;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-\[12px\] {
@@ -885,6 +915,47 @@ nav {
 body {
   padding-top: 64px;
   /* Adjust based on your navigation height */
+}
+
+/* Initially, hide the modal */
+
+#image-modal {
+  display: none;
+  /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Make modal visible when it has the 'active' class */
+
+#image-modal.active {
+  display: flex;
+}
+
+#modal-image {
+  max-width: 90%;
+  max-height: 90%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+#image-modal {
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  inset: 0;
+  /* Fullscreen */
+  background: rgba(0, 0, 0, 0.8);
+  /* Dark background */
+  z-index: 50;
+}
+
+#close-modal {
+  font-size: 2rem;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
 }
 
 @media (min-width: 640px) {
