@@ -917,13 +917,16 @@ body {
   /* Adjust based on your navigation height */
 }
 
-/* Initially, hide the modal */
+/* Image modal styling */
 
-#image-modal {
-  display: none;
-  /* Hidden by default */
-  justify-content: center;
-  align-items: center;
+.image-modal img {
+  max-width: 90vw;
+  /* Ensures the image fits within 90% of the viewport width */
+  max-height: 90vh;
+  /* Ensures the image fits within 90% of the viewport height */
+  -o-object-fit: contain;
+     object-fit: contain;
+  /* Maintain aspect ratio */
 }
 
 /* Make modal visible when it has the 'active' class */
@@ -939,14 +942,14 @@ body {
      object-fit: contain;
 }
 
-#image-modal {
+.image-modal {
+  display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
   inset: 0;
-  /* Fullscreen */
   background: rgba(0, 0, 0, 0.8);
-  /* Dark background */
+  /* Background dark overlay */
   z-index: 50;
 }
 
